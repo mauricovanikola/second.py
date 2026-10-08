@@ -1,4 +1,7 @@
-if __name__ == "__main__":
+if__name__ == "__main__":
 
   vek = input("Zadej svuj vek: ")
-  print(f"Tvuj vek je {vek}")
+
+
+
+  print(f"Za rok ti bude {vek}")
