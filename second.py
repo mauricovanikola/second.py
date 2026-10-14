@@ -1,1 +1,50 @@
+def cislo_text(cislo):
+    cisla = {
+        0: "nula",
+        1: "jedna",
+        2: "dva",
+        3: "tři",
+        4: "čtyři",
+        5: "pět",
+        6: "šest",
+        7: "sedm",
+        8: "osm",
+        9: "devět",
+        10: "deset",
+        11: "jedenáct",
+        12: "dvanáct",
+        13: "třináct",
+        14: "čtrnáct",
+        15: "patnáct",
+        16: "šestnáct",
+        17: "sedmnáct",
+        18: "osmnáct",
+        19: "devatenáct",
+        20: "dvacet",
+        30: "třicet",
+        40: "čtyřicet",
+        50: "padesát",
+        60: "šedesát",
+        70: "sedmdesát",
+        80: "osmdesát",
+        90: "devadesát",
+        100: "sto"
+    }
 
+    cislo = int(cislo)
+
+    if cislo in cisla:
+        return cisla[cislo]
+
+    if 21 <= cislo <= 99:
+        desitky = (cislo // 10) * 10
+        jednotky = cislo % 10
+        return cisla[desitky] + " " + cisla[jednotky]
+
+    return "nepodporované číslo"
+
+
+print(cislo_text(0))
+print(cislo_text(15))
+print(cislo_text(25))
+print(cislo_text(100))
